@@ -32,7 +32,7 @@ const SideBar = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "161d2f",
+        backgroundColor: "#161d2f",
         padding: 2,
         borderRadius: 2,
         display: "flex",
