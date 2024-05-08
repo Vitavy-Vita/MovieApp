@@ -1,9 +1,9 @@
 import { Box, Hidden, Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
-import HomeIcon from "../../../public/house-solid.svg";
-import BookmarkIcon from "../../../public/bookmark-regular.svg";
-import MovieIcon from "../../../public/video-solid.svg";
-import SerieIcon from "../../../public/tv-solid.svg";
+import HomeIcon from "../../assets/icons/icon-nav-home.svg";
+import BookmarkIcon from "../../assets/icons/icon-nav-bookmark.svg";
+import MovieIcon from "../../assets/icons/icon-nav-movies.svg";
+import SerieIcon from "../../assets/icons/icon-nav-tv-series.svg";
 
 const navLinks = [
   {

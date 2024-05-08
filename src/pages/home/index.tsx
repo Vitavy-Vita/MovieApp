@@ -1,7 +1,15 @@
-import { Box, InputAdornment, InputBase, Paper } from "@mui/material";
+import {
+  Box,
+  InputAdornment,
+  InputBase,
+  Paper,
+  Typography,
+} from "@mui/material";
 import Layout from "../../layout";
 import { SetStateAction, useState } from "react";
 import SearchIcon from "../../assets/icons/icon-search.svg";
+import MovieTrendlist from "../../components/movie-list/movieTrendList";
+import Movielist from "../../components/movie-list";
 
 const Home = () => {
   const [search, setSearch] = useState();
@@ -43,6 +51,28 @@ const Home = () => {
             }
           />
         </Paper>
+      </Box>
+      <Box py={2} px={4}>
+        {search === "" ? (
+          <Box width="100%">
+            <Box width="100%">
+              <Typography variant="h5" component="h1" fontWeight={400}>
+                Trending
+              </Typography>
+              <MovieTrendlist trendingList={trendingList} />
+            </Box>
+            <Box width="100%">
+              <Typography variant="h5" component="h1" fontWeight={400}>
+                Recommended for you
+              </Typography>
+              <Movielist recommendList={recommendList} />
+            </Box>
+          </Box>
+        ) : (
+          <Box width="100%">
+            <Typography>Found</Typography>
+          </Box>
+        )}
       </Box>
     </Layout>
   );
